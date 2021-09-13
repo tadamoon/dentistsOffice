@@ -58,14 +58,14 @@ app.get('/existingpatientlookup/:id', (req, res) =>{
     
        
 })
-//edit form for updating comments
+//edit form for updating appts
 app.get('/existingpatientlookup/:id/edit', (req, res)=>{
     const {id} =req.params;
    
     const appt = patients.find(a => a.id===(id));
     res.render('new', { appt })
 })
-//update the comments and display
+//update the appts and display
 app.patch('/existingpatientlookup/:id', (req, res) =>{
     const {id} =req.params;
     const newApptText=req.body.appt;
@@ -76,7 +76,7 @@ app.patch('/existingpatientlookup/:id', (req, res) =>{
 })
 
 
-//delete comments
+//delete patients
 app.delete('/existingpatientlookup/:id', (req, res) =>{
     const {id} =req.params;
     //const foundComment = comments.find(c => c.id===(id)); 
