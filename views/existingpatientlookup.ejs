@@ -1,0 +1,18 @@
+<%- include('partials/header') %>;
+
+
+    <%-include('partials/navbar') %>;
+
+
+<h1>Existing Patients - INDEX page</h1>
+
+<ul>
+    <% for(let pat of patients) { %>
+         <li><i><%=pat.name%> </i>-  <b>age:</b> <%=pat.age%>  <b>phone:</b> <%=pat.phone%> <b> Appt:</b> <%=pat.appt %> <b>id: </b> <%=pat.id %><a href="/existingpatientlookup/<%=pat.id %>">Details</a></li>
+   <% } %>
+ </ul>
+
+     <a href="/newpatient">New Patient</a>
+     <a href="/home">Back to Home</a>
+
+<%- include('partials/footer') %>;

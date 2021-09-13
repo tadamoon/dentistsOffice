@@ -1,0 +1,22 @@
+<%- include('partials/header') %>;
+
+
+    <%-include('partials/navbar') %>;
+
+
+<h1>Appointments (Show Details) page</h1>
+<h2>patient id:  <%=patient.id%></h2>
+<h3>patient phone:  <%=patient.phone%></h3>
+<h3>patient name:  <%=patient.name%></h3>
+<h4>patient appointment:  <%=patient.appt%></h4>
+
+
+<a href="/">Back to Patient List</a>
+
+<a href="/existingpatientlookup/<%=patient.id%>/edit">Edit Appointment</a>
+     <form method="POST" action="/existingpatientlookup/<%=patient.id%>?_method=DELETE">
+    <button>Delete Patient</button>
+    </form>
+
+<%- include('partials/footer')%>;
+

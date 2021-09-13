@@ -1,0 +1,18 @@
+<%- include('partials/header') %>;
+
+
+    <%-include('partials/navbar') %>;
+
+
+<h1> Schedule New Appointments </h1>
+
+<form method="post" action="/existingpatientlookup/<%=appt.id%>?_method=PATCH">
+    <textarea name="appt" id="" cols="20" rows="5">
+        <%= appt.appt %>
+    </textarea>
+<button>Save</button>
+    </form>
+
+
+
+<%- include('partials/footer')%>

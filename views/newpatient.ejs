@@ -1,0 +1,33 @@
+
+<%- include('partials/header') %>;
+
+
+<%-include('partials/navbar') %>;
+
+
+<h1>New Patient Form</h1>
+
+<form action="/existingpatientlookup" method="post">
+    <div class="row">
+      <div class="col">
+        <label for="name">Enter full name</label>
+        <input type="text" class="form-control" placeholder="Full name"id="name" name="name">
+      </div>
+      <div class="col">
+        <label for="age">Enter patient age</label>
+        <input type="number" class="form-control" placeholder="age" id="age" name="age">
+      </div>
+      <div class="col">
+        <label for="phone">Enter patient phone</label>
+        <input type="number" class="form-control" placeholder="phone number" id="phone" name="phone">
+      </div>
+      <div class="col">
+        <label for="appointment">Enter appointment as mm/dd/yyyy</label>
+        <input type="text" class="form-control" placeholder="appointment" id="appt" name="appt">
+      </div>
+      
+    </div>
+        <button>Submit</button>
+  </form>
+
+<%- include('partials/footer') %>
